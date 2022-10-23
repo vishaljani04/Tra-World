@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complate Website with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- bootstrap Link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3a" crossorigin="anonymous">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" href="/Traworld.css"> -->
+
+</head>
+<body>
+
+    <Style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+:root{
+  --orange:#ffa500;
+}
+body{
+  overflow:hidden;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+.responsive-div { 
+  position: fixed;
+  width: 70vw;
+   height: 50vh;  
+ }
+
+*::selection{
+  background:#1bb5ae;
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.heading{
+  text-align: center;
+  padding:2.5rem 0
+}
+
+.heading span{
+  font-size: 3.5rem;
+  /* background:rgba(255, 165, 0,.2); */
+  color:#1bb5ae;
+  border-radius: .5rem;
+  padding:.2rem 1rem;
+}
+
+.heading span.space{
+  background:none;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1.5rem;
+  background:#1bb5ae;
+  color:rgb(255, 255, 255);
+  padding:.8rem 3rem;
+  /* border:.2rem solid #1bb5ae; */
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover{
+  background:#8efff9;
+  color:#000000;
+}
+
+/* <------header---------> */
+
+header{
+  position: fixed;
+  top:0; left: 0; right:0;
+  background:#333;
+  z-index: 400;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 8%;
+}
+
+header .logo{
+  font-size: 2.2rem;
+  font-weight: bolder;
+  color:#fff;
+  margin-left: 65px;
+  /* text-transform: uppercase; */
+}
+header .logo1 img
+{
+   height: 39px;
+   width: 39px;
+    
+}
+
+
+header .logo span{
+  margin-left: -5rem;
+  font-size: 3.5rem;
+  color:#1bb5ae;
+}
+
+header .navbar a{
+  color:#fff;
+  font-size: 1.8rem;
+  margin:0 2rem;
+}
+
+header .navbar a:hover{
+  color:#1bb5ae;
+}
+
+header .icons i{
+  font-size: 2.5rem;
+  color:#fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover{
+  color:#1bb5ae;
+}
+
+header .search-bar-container{
+  position: absolute;
+  top:100%; left: 0; right:0;
+  padding:1.5rem 2rem;
+ 
+  border-top: .1rem solid rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar{
+  width:100%;
+  padding:1rem;
+  text-transform: none;
+  color:#333;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+}
+
+header .search-bar-container label{
+  color:#fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
+  color:#1bb5ae;
+}
+
+.login-form-container{
+  position: fixed;
+  top:-120%; left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width:100%;
+  background:rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* <------login---------> */
+
+
+.login-form-container.active{
+  top:0;
+}
+
+.login-form-container form{
+  margin:2rem;
+  padding:1.5rem 2rem;
+  border-radius: .5rem;
+  background:#fff;
+  width:50rem;
+}
+
+.login-form-container form h3{
+  font-size: 3rem;
+  color:#444;
+  text-transform: uppercase;
+  text-align: center;
+  padding:1rem 0;
+}
+
+.login-form-container form .box{
+  width:100%;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  margin:.6rem 0;
+  border:.1rem solid rgba(0,0,0,.3);
+  text-transform: none;
+}
+
+.login-form-container form .box:focus{
+  border-color: #1bb5ae;;
+}
+
+.login-form-container form #remember{
+  margin:2rem 0;
+}
+
+.login-form-container form label{
+  font-size: 1.5rem;
+}
+
+.login-form-container form .btn{
+  display: block;
+  width:100%;
+}
+
+.login-form-container form p{
+  padding:.5rem 0;
+  font-size: 1.5rem;
+  color:#666;
+}
+
+.login-form-container form p a{
+  color:#1bb5ae;
+}
+
+.login-form-container form p a:hover{
+  color:#333;
+  text-decoration: underline;
+}
+
+.login-form-container #form-close{
+  position: absolute;
+  top:2rem; right:3rem;
+  font-size: 5rem;
+  color:#fff;
+  cursor: pointer;
+}
+
+#menu-bar{
+  color:#fff;
+  border:.1rem solid #fff;
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding:.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* <------Home---------> */
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;
+}
+
+.home .content h3{
+  font-size: 4.5rem;
+  border-color: black ;
+  color:rgb(77, 77, 79);
+  /* text-transform: uppercase; */
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .content p{
+  border-color: rgb(247, 5, 5);
+  border-radius: 1rem;
+  font-size: 3rem;
+  /* text-align: right; */
+  color:rgb(12, 12, 12);
+  padding:.3rem 0;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.home .video-container video{
+  position: absolute;
+  top:0; left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.home .controls{
+  padding:1rem;
+  border-radius: 5rem;
+  /* background:rgba(0,0,0,.7); */
+  position: relative;
+  top:10rem;
+}
+
+.home .controls .vid-btn{
+  height:2rem;
+  width:2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background:rgb(254, 254, 253);
+  cursor: pointer;
+  margin:0 .5rem;
+}
+
+.home .controls .vid-btn.active{
+  background:#1bb5ae;
+}
+
+.packages .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+/* <------Packages---------> */
+
+.packages .box-container .box{
+  flex:1 1 30rem;
+  border-radius: 4rem;
+  overflow: hidden;
+  box-shadow: 0 2.5rem   1.5rem rgba(0,0,0,.1);
+}
+
+.packages .box-container .box img{
+  transition: transform .5s; /* Animation */
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+.packages .box-container .box img:hover{
+  transform: scale(1.1);
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+.packages .box-container .box .content .btn{
+  border-radius:0.9rem;
+}
+.packages .box-container .box .content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+.packages .box-container .box .content h3 i{
+  color:#1bb5ae;
+}
+.packages .box-container .box .content h3 a :target{
+  scroll-behavior: smooth;
+}
+.packages .box-container .box .content p{
+  font-size:1.7rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.packages .box-container .box .content .stars i{
+  font-size:1.7rem;
+  color:#1bb5ae;
+}
+
+.packages .box-container .box .content .price{
+  font-size: 2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span{
+  color:#666;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+/* <------Services---------> */
+
+.services .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.services .box-container .box{
+  flex: 1 1 30rem;
+  border-radius: .5rem;
+  padding:1rem;
+  text-align: center;
+}
+
+.services .box-container .box i{
+  padding:1rem;
+  font-size: 5rem;
+  color:#1bb5ae;
+}
+
+.services .box-container .box h3{
+  font-size: 2.5rem;
+  color:#333;
+}
+
+.services .box-container .box p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.services .box-container .box:hover{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  
+}
+
+/* <------Gallary---------> */
+
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  /* border:1rem solid #fff; */
+  border-radius: 3.2rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0,0,0,.7);
+  padding:2rem;
+  padding-top: 5rem;
+}
+
+.gallery .box-container .box:hover .content{
+  top:0;
+}
+
+.gallery .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:#1bb5ae;
+}
+
+.gallery .box-container .box .content p{
+  font-size: 1.5rem;
+  color:#eee;
+  padding:.5rem 0;
+}
+
+/* <------Book---------> */
+
+.book .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.book .row .image{
+  flex:1 5 10rem;
+}
+
+.book .row .image img{
+  width:90%;
+}
+
+.book .row form{
+  flex:1 1 40rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  overscroll-behavior-inline: smooth;
+}
+
+.book .row form .inputBox{
+  padding:.5rem 0;
+}
+
+.book .row form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#666;
+}
+
+/* <------Contact---------> */
+
+.contact .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.contact .row .image{
+  flex:1 1 35rem;
+}
+
+.contact .row .image img{
+  width:90%;
+}
+
+.contact .row form{
+  flex:1 1 50rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea{
+  width:49%;
+  margin:1rem 0;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  background:#f7f7f7;
+  text-transform: none;
+}
+
+.contact .row form textarea{
+  height: 15rem;
+  resize: none;
+  width:100%;
+}
+
+.brand-container{
+  text-align: center;
+}
+
+/* <------Footer---------> */
+
+.footer{
+  background:#333;
+}
+
+.footer .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.footer .box-container .box{
+  padding:1rem 0;
+  flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  padding:.7rem 0;
+  color:#fff;
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box a:hover{
+  color:#1bb5ae;
+  text-decoration: underline;
+}
+
+.footer .credit{
+  text-align: center;
+  padding:2rem 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color:#fff;
+  border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+  color:#1bb5ae;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+  html{
+    font-size: 55%;
+  }
+
+}
+
+@media (max-width:991px){
+
+  header{
+    padding:2rem;
+  }
+
+  section{
+    padding:2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-bar{
+    display: initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; right:0; left: 0;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    padding:1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding:1.5rem;
+    margin:1.5rem 0;    
+    background:#222;
+  }
+
+}
+
+@media (max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .heading span{
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox input{
+    width:100%;
+  }
+
+}
+
+    </Style>
+
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <!-- logo -->
+    <!-- <div class="logo1">
+        <img src="Travel_C-removebg-preview.png">
+    </div> -->
+    
+    <a href="#" class="logo">
+        <span>T</span>raWorld</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <!-- <a href="#review">review</a> -->
+         <a href="#book">book</a>
+        <a href="#contact">contact</a>
+    </nav>
+    
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- login form container  -->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="/login" method="post">
+        <h3>login</h3>
+        <input type="email" name="id" class="box" placeholder="enter your email">
+        <input type="password" name="pass" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+
+</div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Travel Brings power and Love Back into Your Life</h3>
+        <p>Ready For Any Adeventure</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn" data-src="production ID_4611893.mp4"></span>        
+        <span class="vid-btn" data-src="Pexels Videos 1660911.mp4"></span>
+        <span class="vid-btn active" data-src="video (1).mp4"></span>
+        <span class="vid-btn" data-src="Outside View Of An Airplane Wing.mp4"></span>
+        <span class="vid-btn" data-src="video.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="video (1).mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+        <div class="box"> 
+            <img src="India.jpg" alt="">
+            <div class="content">
+                <h3> <a href="https://goo.gl/maps/bNe5mtB7edQx11BAA/" target="_blank"><i class="fas fa-map-marker-alt"></i></a> INDIA </h3>
+                <p>Visit This Most Beautiful place and Know About Diffrent Cluture Activities in the World Each and every 28 states and 7 union territories of India.Click the Location button</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 35000₹ <span>37000₹</span> </div>
+                <a href="https://www.britannica.com/place/India" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Dubai.jpg" alt="">
+            <div class="content">
+                <h3>  <a  href="https://goo.gl/maps/QSv1ugK1vxmPz96C6/" target="_blank"><i class="fas fa-map-marker-alt"></i></a> DUBAI </h3>
+                <p>Dubai is a city and Emirates in the United Arab Emirates And Burj Khalifa 830m-tall tower, dominates the skyscraper-filled skyline and More.Click the location button</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 60000₹ <span>61500₹</span> </div>
+                <a href="https://www.britannica.com/place/Dubai-United-Arab-Emirates" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="HongKong.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/NmsPodDBPHVjvNaZ8/" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> HONKONG </h3>
+                <p>HongKong is the Place of China.It is The Famous for Buddha temple And See The DisneyLand Most International Human Are Travel To HongKong.Click The location Button</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 52000₹ <span>52500₹</span> </div>
+                <a href="https://www.britannica.com/place/Hong-Kong" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="paris.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/n9KeasrxzGg4teho6/" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> PARIS </h3>
+                <p>Paris is The Most Colded Place In The World And Afil-Tower IS Most Attraction Of the Paris in The World Visit The  Most Beautiful Places.Click The Loaction button.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 78000₹ <span>80000₹</span> </div>
+                <a href="https://www.britannica.com/place/Paris" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="tokyo.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/Acufi34qVRgvjBu37" target="_blank"><i class="fas fa-map-marker-alt"></i></a> TOKYO </h3>
+                <p>Tokyo City is Of The Japan And Enjoy Nature And Arts.It is Know About Technologies And Visit The Most Intersting Place SkyTree.Click The Loaction Button</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 66500₹ <span>68000₹</span> </div>
+                <a href="https://www.britannica.com/place/Tokyo" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="Egypt.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/snnSaeccSrkt2tH6A" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> EGYPT </h3>
+                <p>Egypt is city of The Africa.It Is Famous For Pyramids of Giza,in Pyramids And More Historical Place.Click The Location Button</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 58000₹ <span>60000₹</span> </div>
+                <a href="https://www.britannica.com/place/Egypt" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+
+
+        <div class="box">
+            <img src="NEW-ZEALAND.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/BP8y9Se3rUBQuSUw9" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> NEW-ZEALAND </h3>
+                <p>New Zealand lies in the Pacific Ocean, to the southwest. New Zealand promises beautiful landscapes and serene.</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 75000₹ <span>79000₹</span> </div>
+                <a href="https://www.britannica.com/place/New-Zealand" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="rome.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/zUCdrWEcPyNgiRdS6" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> ROME </h3>
+                <p>This was originally called the Flavian Amphitheatre and was mostly used as public entertainment arena. The Colosseum is one of the most famous attractions in Rome.</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 55500₹ <span>60000₹</span> </div>
+                <a href="https://www.britannica.com/place/ancient-Rome" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="london.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/jPzo1PvEMEDXQc2aA" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> LONDON </h3>
+                <p>Standing on the Thames River, London is the capital of England as well as the most populous city in Great Britain. The city is a confluence of the old.</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 100000₹ <span>109000₹</span> </div>
+                <a href="https://www.britannica.com/place/London" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="austrelia.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/E5YqK1NBXS4H58Dk6" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> AUSTRELIA </h3>
+                <p>Stretching for 2300 kilometres off the east coast of Australia, the Great Barrier Reef is one of nature's greatest marvels. It is officially the biggest structure.</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 90000₹ <span>95000₹</span> </div>
+                <a href="https://www.britannica.com/place/Australia" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="MALDIVES.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/YQSyJcWGnRuxTySL8" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> MALDIVES </h3>
+                <p>The Maldives, a tropical haven of immaculate beaches, are an archipelago of 1,192 coral islands grouped into natural atolls, out of which only a few are inhabited. Time stands still in the Maldives.</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 60000₹ <span>70000</span> </div>
+                <a href="https://www.britannica.com/place/Maldives" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="california.jpg" alt="">
+            <div class="content">
+                <h3> <a  href="https://goo.gl/maps/FXVVSADWg6XpX8XSA" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> CALIFORNIA </h3>
+                <p>California is a state in the Western United States, located along the Pacific Coast. With nearly 39.2 million.</p>
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> 150000₹ <span>175000₹</span> </div>
+                <a href="https://www.britannica.com/place/California-state" class="btn" target="_blank">View More</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Cheapest hotels</h3>
+            <p>We Will Provide Affordable Means cheapest Hotels And More facilities Are Also.No Booking Fees And Any Charge.Swimming Pool,Villa,Nature It is The Need For choice.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>foods</h3>
+            <p>In The Hotels Provide Fresh food With Startus.And Fresh Fruites,Vegetables Are Use.If There Avilable </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Travel guide</h3>
+            <p>Hotels Are Provide travel guide Beacuse Make copies of important documents,Keep your friends and family updated,Be wary of public Wi-Fi,As Your Choice It is Not Important.</p>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-bus-simple"></i>
+            <h3>Bus And Taxy</h3>
+            <p>Hotels Are Provide Free Bus And Taxy visit The places And The Vehicle Will Provide According To Your family. </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p>We Will Privide fastest Travel Service,safty And The supersonic Concorde aircraft used to be the quickest way to travel In The World And In Travel Foods and Drinks Are Provide </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures</h3>
+            <p>Hotels Are Provide In Mountain Area To Enjoy Adventures And Fun,Treking And climbing are Also Provide.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="1.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn"> Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="2.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="3.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="4.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="5.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="6.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="7.jpg" alt=""> 
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="8.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn">Shere Photos</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="9.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="10.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="11.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="12.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- book section starts  -->
+
+<section class="book" id="book">
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="Travel_C-removebg-preview.png" alt="">
+        </div>
+
+        <form method="post" action="/form">
+            <div class="inputBox">
+                <h3>Where Do You Want to Go?</h3>
+                <input type="text" name="Name" placeholder="place name">
+            </div>
+            <div class="inputBox">
+                <h3>how many Person Are Travel?</h3>
+                <input type="number" name="Number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>arrival</h3>
+                <input type="datee" name="Datee" placeholder="Enter The Arrival date">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date1" Name="date1" placeholder="Enter The Leaving date">
+            </div>
+            <input type="submit" class="btn" value="book now">
+        </form>
+
+    </div>
+
+</section>
+
+<!-- book section ends -->
+
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="contact-us-removebg-preview.png" alt="">
+        </div>
+
+        <form method="post" action="/contact">
+            <div class="inputBox">
+                <input type="text" name="Name" placeholder="name">
+                <input type="email" name="Email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="numberr" name="Number" placeholder="phone number">
+                <input type="text" name="Subject" placeholder="subject">
+            </div>
+            <textarea placeholder="message" name="msg" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<!-- <section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+</section> -->
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>This is A Fully Responsive Website Created By Vishal,Sujal,Dhruv,Darshan And This is The Owner Of Traworld Agency.</p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="https://goo.gl/maps/JdE5uez75qJoM44u5" target="_blank">india</a>
+            <a href="https://goo.gl/maps/ysDyVSESUpC73FXaA" target="_blank">Mumbai</a>
+            <a href="https://goo.gl/maps/k8fjkwzwubwHnKqr5" target="_blank">New Delhi</a>
+            <a href="https://goo.gl/maps/rEEjwDHCkX71gyGX7" target="_blank">Deheradun</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com" target="_blank">facebook</a>
+            <a href="https://www.instagram.com" target="_blank">instagram</a>
+            <a href="https://www.twitter.com" target="_blank">twitter</a>
+            <a href="https://in.linkedin.com/" target="_blank">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> © Copyright 2022<span> Traworld Agency</span></h1>
+
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // raeal code
+
+let searchBtn = document.querySelector('#search-btn');
+let searchBar = document.querySelector('.search-bar-container');
+let formBtn = document.querySelector('#login-btn');
+let loginForm = document.querySelector('.login-form-container');
+let formClose = document.querySelector('#form-close');
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+let videoBtn = document.querySelectorAll('.vid-btn');
+
+window.onscroll = () =>{
+    searchBtn.classList.remove('fa-times');
+    searchBar.classList.remove('active');
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+    loginForm.classList.remove('active');
+}
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+});
+
+searchBtn.addEventListener('click', () =>{
+    searchBtn.classList.toggle('fa-times');
+    searchBar.classList.toggle('active');
+});
+
+formBtn.addEventListener('click', () =>{
+    loginForm.classList.add('active');
+});
+
+formClose.addEventListener('click', () =>{
+    loginForm.classList.remove('active');
+});
+
+videoBtn.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+        document.querySelector('.controls .active').classList.remove('active');
+        btn.classList.add('active');
+        let src = btn.getAttribute('data-src');
+        document.querySelector('#video-slider').src = src;
+    });
+});
+
+var swiper = new Swiper(".review-slider", {
+    spaceBetween: 20,
+    loop:true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+    },
+});
+
+var swiper = new Swiper(".brand-slider", {
+    spaceBetween: 20,
+    loop:true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        450: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 5,
+        },
+      },
+});
+
+const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
+
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
+
+    // js code to appear signup and login form
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
+
+</script>
+
+<!-- custom js file link  -->
+<!-- <script src="/Traworld.js"></script> -->
+
+</body>
+</html>
